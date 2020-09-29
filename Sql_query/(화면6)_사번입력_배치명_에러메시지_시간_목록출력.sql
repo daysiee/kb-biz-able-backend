@@ -1,0 +1,27 @@
+--화면6
+-- USER_ID(사번) 입력
+-- 배치이름, 에러메시지, 실행시간, order_id // 페이징 있음 0~10
+WITH DOINGJOB_T AS (
+    SELECT EZ_JOB_MAPPER.JOB_NAME
+    FROM EZ_JOB_MAPPER,
+         EZ_USER
+    WHERE EZ_JOB_MAPPER.USER_CD_1 = EZ_USER.USER_CD
+      AND EZ_USER.USER_ID = 'SE18010'
+)
+
+-----
+
+SELECT JOB_NAME, MESSAGE, HOST_TIME, ORDER_ID
+FROM (
+         SELECT ROW_NUMBER() over (ORDER BY HOST_TIME) rnum, JOB_NAME, MESSAGE, HOST_TIME, ORDER_ID
+         FROM (
+                  SELECT ALARM.JOB_NAME, ALARM.MESSAGE, ALARM.HOST_TIME, ALARM.ORDER_ID
+                  FROM ALARM,
+                       DOINGJOB_T
+                  WHERE ALARM.JOB_NAME in DOINGJOB_T.JOB_NAME
+              )
+         ORDER BY HOST_TIME DESC
+     )
+WHERE rnum BETWEEN 0 AND 10;
+
+
