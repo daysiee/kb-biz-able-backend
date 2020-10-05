@@ -1,7 +1,11 @@
 # Biz-able Backend
 ## Biz-able?
 - 모바일 배치 관리 시스템
+- 업무시간 외, 외부망을 통해 조회 가능한 장점
 - 필터를 통한 배치 내역 조회 및 비상연락망 기능 수행
+</br>
+
+## 아키텍처
 </br>
 
 ## 담당 업무
@@ -21,3 +25,4 @@
 - 앱 UI 고려, 매 요청 마다 10개의 레코드 반환
 ### Data Binding
 - sql 인젝션 방지를 위해 prepared statements&data binding으로 보안성 강화
+</br>
