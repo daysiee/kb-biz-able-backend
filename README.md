@@ -6,6 +6,7 @@
 </br>
 
 ## 아키텍처
+![architecture](https://github.com/daysiee/kb-biz-able-backend/blob/master/%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98.jpg)
 </br>
 
 ## 담당 업무
