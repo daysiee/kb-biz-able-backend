@@ -18,7 +18,6 @@
 - 로그인 API 샘플(res&req)
 </br>
 ![req](https://github.com/daysiee/kb-biz-able-backend/blob/master/%EB%A1%9C%EA%B7%B8%EC%9D%B8req.PNG)
-![res](https://github.com/daysiee/kb-biz-able-backend/blob/master/%EB%A1%9C%EA%B7%B8%EC%9D%B8res.PNG)
 </br>
 
 ## 구현 기술
