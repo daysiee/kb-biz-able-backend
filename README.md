@@ -17,7 +17,7 @@
 - [레퍼런스 링크](https://documenter.getpostman.com/view/10284982/T1LV9Phh)
 - 로그인 API 샘플(res&req)
 </br>
-![req](https://github.com/daysiee/kb-biz-able-backend/blob/master/%EB%A1%9C%EA%B7%B8%EC%9D%B8req.PNG)
+- ![req](https://github.com/daysiee/kb-biz-able-backend/blob/master/%EB%A1%9C%EA%B7%B8%EC%9D%B8req.PNG)
 </br>
 
 ## 구현 기술
