@@ -243,7 +243,7 @@ app.post('/loginEZ', function(req,res){
 
 
 // 메인 My탭 대시보드 데이터 조회
-app.post('/getMainChartData_My', function(req,res){
+app.post('/getMainChartData_My', auth,function(req,res){
     oracledb.getConnection(
         {
             user          : dbConfig.user,
@@ -284,7 +284,7 @@ app.post('/getMainChartData_My', function(req,res){
 
 
 // 메인 All탭 대시보드 데이터 조회
-app.post('/getMainChartData_All', function(req,res){
+app.post('/getMainChartData_All', auth,function(req,res){
     oracledb.getConnection(
         {
             user          : dbConfig.user,
@@ -324,7 +324,7 @@ app.post('/getMainChartData_All', function(req,res){
 
 
 // 사번(USER_ID) 입력 시 배치 에러 내역 조회(에러배치명, 에러메시지, 실행시간)
-app.post('/getErrorHistory_byUID', function(req,res){
+app.post('/getErrorHistory_byUID', auth,function(req,res){
     oracledb.getConnection(
         {
             user          : dbConfig.user,
@@ -398,7 +398,7 @@ app.post('/getErrorHistory_byUID', function(req,res){
 
 
 // 일련번호(OrderID) 입력시 배치 상세(담당자명, 소속, 배치명, 상태, ODATE, 앱코드, 결과, 오류조치방안)
-app.post('/getBatchDetail_byOID', function(req,res){
+app.post('/getBatchDetail_byOID', auth,function(req,res){
     oracledb.getConnection(
         {
             user          : dbConfig.user,
@@ -440,7 +440,7 @@ app.post('/getBatchDetail_byOID', function(req,res){
 
 
 //다중 필터로 배치내역 조회
-app.post('/getHistroy_byFilter', function(req,res){
+app.post('/getHistroy_byFilter', auth,function(req,res){
     oracledb.getConnection(
         {
             user          : dbConfig.user,
@@ -577,7 +577,7 @@ app.post('/getHistroy_byFilter', function(req,res){
 
 
 //업무명으로 비상연락망 조회
-app.post('/getPersonInfo_byJob', function(req,res){
+app.post('/getPersonInfo_byJob', auth, function(req,res){
     oracledb.getConnection(
         {
             user          : dbConfig.user,
@@ -652,7 +652,7 @@ app.post('/getPersonInfo_byJob', function(req,res){
 
 
 //담당자명으로 비상연락망 조회
-app.post('/getPersonInfo_byName', function(req,res){
+app.post('/getPersonInfo_byName', auth,function(req,res){
     oracledb.getConnection(
         {
             user          : dbConfig.user,
