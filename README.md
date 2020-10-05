@@ -9,7 +9,7 @@
 </br>
 
 ## API 레퍼런스
-- [postman_link](https://documenter.getpostman.com/view/10284982/T1LV9Phh)
+- [레퍼런스 링크](https://documenter.getpostman.com/view/10284982/T1LV9Phh)
 - 로그인 API 샘플(res&req)
 </br>
 
